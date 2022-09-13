@@ -9,7 +9,7 @@
     justify-content:center;
     align-content:center;
     flex-direction:column;
-    font-family: 'Source Sans Pro', sans-       serif;
+    font-family: 'Source Sans Pro', sans-serif;
   }
   
   h1{
@@ -30,7 +30,7 @@
     text-align:center;
   }
   
-  button a{
+  button a {
     color:black;
     text-decoration:none;
   }
