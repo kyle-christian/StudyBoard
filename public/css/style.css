@@ -1,0 +1,53 @@
+:root {
+    --base-green: #d3eedd;
+    --dark-green: #3a4b40;
+  }
+  
+  body {
+    background-color: var(--base-green);
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+    font-family: 'Source Sans Pro', sans-       serif;
+  }
+  
+  h1{
+      font-size: 3rem;
+      color: black;
+  }
+  .completed{
+      text-decoration: line-through;
+      color: gray;
+  }
+  .not{
+      text-decoration: underline;
+  }
+  
+  .card {
+    height: 300px;
+    width: 100%;
+    text-align:center;
+  }
+  
+  button a{
+    color:black;
+    text-decoration:none;
+  }
+  
+  section {
+    text-align:center;
+  }
+  
+  /*###################
+  Table 
+  ###################*/
+   table, th, tr{
+    border: 2px solid lightskyblue;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+  }
+  th, td {
+    padding: 5px;
+  }
