@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>
-        Hello, <%= user.userName[0].toUpperCase() + user.userName.substr(1) %>! Here are your stats:
-        <%= time.time %>
-    <h1>
+    <h1>Good morning <%= user.userName[0].toUpperCase() + user.userName.substr(1) %>!</h1>
+    <h2>
+        my name is <%= time.time %>
+    </h2>
     <form action="/user/createStats" method="POST">
         <input type="submit">
     </form>
