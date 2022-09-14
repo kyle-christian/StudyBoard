@@ -14,7 +14,7 @@
   
   h1{
       font-size: 3rem;
-      color: black;
+      color: var(--dark-green);
   }
   .completed{
       text-decoration: line-through;
@@ -28,6 +28,14 @@
     height: 300px;
     width: 100%;
     text-align:center;
+  }
+  
+  button {
+    background-color: lightskyblue;
+    border: none;
+    width: 60px;
+    height: 1.5rem;
+    border-radius: 10px;
   }
   
   button a {
