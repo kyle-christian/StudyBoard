@@ -1,4 +1,69 @@
-const stopwatch = document.querySelector('#stopwatch')
+// const stopwatch = document.querySelector('#stopwatch')
+
+let hundreds = 00;
+let secs = 00;
+let mins = 00; 
+
+let appendHundred = document.querySelector('.hund')
+let appendSeconds = document.querySelector('.sec')
+let appendMinutes = document.querySelector('.min')
+
+
+function timer() {
+  hundreds++;
+  if (hundreds <= 9) {
+    appendHundred.innerHTML = "0" + hundreds
+  }
+
+  if (hundreds > 9) {
+    appendHundred.innerHTML = hundreds
+  }
+
+  if(hundreds > 99) {
+    hundreds = 0;
+    appendHundred.innerHTML = "0" + hundreds
+    secs++;
+    appendSeconds.innerHTML = "0" + secs
+  }
+  
+  if (secs <= 9) {
+    appendSeconds.innerHTML = "0" + secs;
+  }
+
+  if (secs > 9) {
+    appendSeconds.innerHTML = secs;
+  }
+
+  if (secs > 59) {
+    secs = 0
+    appendSeconds.innerHTML = "0" + secs;
+    mins++;
+    appendMinutes.innerHTML = "0" + mins;
+  }  
+  
+}
+
+let laps = document.getElementById('duration')
+function start() {
+  interval = setInterval(timer, 10); 
+}
+
+function stop() {
+  clearInterval(interval);
+  laps.innerText = `Duration: ${appendMinutes.innerHTML} : ${appendSeconds.innerHTML} : ${appendHundred.innerHTML}`
+}
+
+
+function reset() {
+  hundreds = 0;
+  secs = 0;
+  mins = 0;
+  appendHundred.innerHTML = "0" + hundreds;
+  appendSeconds.innerHTML = "0" + secs;
+  appendMinutes.innerHTML = "0" + mins;
+  laps.innerText = ""
+}
+
 
 
 
