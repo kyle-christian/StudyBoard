@@ -1,3 +1,4 @@
+
 :root {
     --base-green: #d3eedd;
     --dark-green: #3a4b40;
@@ -36,6 +37,7 @@
     width: 60px;
     height: 1.5rem;
     border-radius: 10px;
+    
   }
   
   button a {
@@ -59,3 +61,13 @@
   th, td {
     padding: 5px;
   }
+
+  .rank{
+    width: 70px;
+  }
+
+  .member{
+    text-align: left;
+    padding-left: 10px;
+  }
+
