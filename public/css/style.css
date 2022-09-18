@@ -1,22 +1,211 @@
 
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{
+  font-size:62.5% /* for REM font */
+}
+
+
+
 :root {
     --base-green: #d3eedd;
     --dark-green: #3a4b40;
+    --dark-light: #fcfcfc;
   }
   
   body {
     background-color: var(--base-green);
-    display:flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
+
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
   }
+
+  .bodyCentered{
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content: center;
+    align-items:center;
+
+    padding-top: 100px;
+    /* padding-left: 20px; */
+
+  }
+
+
+  .sectionBackground{
+    background-color: var(--dark-light);
+
+    border: 2px solid lightskyblue;
+
+
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+
+    justify-content: center;
+    align-items:center;
+
+    /* flex-grow:1; */
+
+
+  }
+
+  .divDecor{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+    flex-grow:1;
+
+  }
+
+.sectionMain{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
   
-  h1{
+    flex-grow:1;
+  }
+
+
+  .sectionP{
+    /* border: 1px dashed darkblue; */
+
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
+  
+    /* flex-grow:1; */
+  }
+
+.sectionButton{
+  /* height: 100px; */
+  /* border: 1px dashed darkblue; */
+  width:50vw;
+
+
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  align-items:space-evenly;
+
+  /* flex-grow:1; */
+}
+
+.h1Decor{
+  /* border: 1px dashed darkblue; */
+
+      /* height:400px; */
+      width:50vw;
+
       font-size: 3rem;
       color: var(--dark-green);
+
+      display:flex;
+
+      flex-direction:center;
+
+      justify-content: space-evenly;
+      align-items: center;
+      /* flex-grow:1; */
   }
+
+
+  .h2Decor{
+    /* border: 1px dashed darkblue; */
+
+    /* height:400px; */
+    height:50px;
+
+    font-size: 2rem;
+    color: var(--dark-green);
+
+    display:flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow:1;
+}
+
+
+.pDecor{
+    display:flex;
+    font-size: 1.5rem;
+
+
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-grow:1; */
+
+  }
+
+.sectionTable{
+  display:flex;
+
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+}
+
+
+.formLayout{
+  /* border: 1px dashed darkblue; */
+
+  height:200px;
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content: space-evenly;
+  align-items:center;
+
+  column-gap: 10px;
+
+}
+
+
+  .inputLayout{
+    height:30px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content: space-evenly;
+    align-items:center;
+
+    column-gap: 10px;
+  }
+
+  
+
   .completed{
       text-decoration: line-through;
       color: gray;
@@ -26,17 +215,28 @@
   }
   
   .card {
-    height: 300px;
+    /* border: 2px dashed darkred; */
+
+    height: 200px;
     width: 100%;
     text-align:center;
+
   }
   
   button {
     background-color: lightskyblue;
     border: none;
-    width: 60px;
-    height: 1.5rem;
-    border-radius: 10px;
+    width: 100px;
+
+    height: 3.0rem;
+    /* border-radius: 5px; */
+    
+  }
+
+
+  button:hover {
+    background-color: rgb(35, 79, 106);
+    color:white;
     
   }
   
@@ -44,6 +244,11 @@
     color:black;
     text-decoration:none;
   }
+
+  button a:hover {
+    color:rgb(255, 255, 255);
+  }
+
   
   section {
     text-align:center;
@@ -63,11 +268,26 @@
   }
 
   .rank{
-    width: 70px;
+    width: 200px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .member{
     text-align: left;
-    padding-left: 10px;
+    padding-left: 20px;
+  }
+
+  .hours{
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 20px;
+    }
+
+  .minutes{
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 20px;
+
   }
 

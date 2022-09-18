@@ -5,40 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+
+   		<!-- external CSS FONT link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">   
+
+ 
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">  -->
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <div class="card">
-    <h1>#100Devs Accountability Leaderboard</h1>
-    
-    <p>Log in now to track your daily stats and be featured on the leaderboard!</p>
-    <button>
-      <a href="/login"> Login</a>
-    </button>
-    <button>  
-      <a href="/signup"> Signup</a>
-    </button>
 
-    
-    <!-- <button>  
-      <a href="/user"> test button</a>
-    </button> -->
-  </div>
+<body class="bodyCentered">
+  <section class="sectionBackground">
 
-  <section>
-   
-    <table>
-      <tr>
-        <th class="rank">Rank </th>
-        <th class="member">100Devs Member</th>
-        <th>Hours Logged</th>
-        <th>Minutes</th>
-      </tr>
-    
-    </table>
+    <h1 class="h1Decor">#100Devs <br>Accountability Leaderboard</h1>
+
+      <div class="card divDecor">
+
+
+        <section class="sectionMain">
+          
+
+
+          <section class="sectionP">
+            <p class="pDecor">Log in now to track your daily stats and <br> be featured on the leaderboard!</p>
+          </section>
+
+          <section class="sectionButton">
+            <button>
+              <a class="aDecor" href="/login"> Login</a>
+            </button>
+            <button>  
+              <a class="aDecor" href="/signup"> Signup</a>
+            </button>
+          </section>
+
+        </section>
+        <!-- <button>  
+          <a href="/user"> test button</a>
+        </button> -->
+      </div>  
+
+    <!-- <section class="sectionTable"> -->
+      <table>
+        <tr>
+          <th class="rank">Rank </th>
+          <th class="member">100Devs Member</th>
+          <th class="hours">Hours Logged</th>
+          <th class="minutes">Minutes</th>
+        </tr>
+      </table>
+    <!-- </section> -->
+
   </section>
 </body>
 </html>

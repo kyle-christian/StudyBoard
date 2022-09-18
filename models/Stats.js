@@ -16,3 +16,4 @@ const StatSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('Stats', StatSchema)
+
