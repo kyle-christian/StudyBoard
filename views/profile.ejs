@@ -10,7 +10,18 @@
           </div>
       </div>
       
-      <span></span>
+      <form
+      class="col-1"
+      action="/stat/createStat"
+      method="POST"
+      >
+        <button type="submit">create stat</button>
+      </form>
+
+      <button class="start">start</button>
+      <button class="stop">stop</button>
+
+      <span><%=stat.time%></span>
 
     </div>
   </div>
