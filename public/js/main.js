@@ -1,5 +1,5 @@
-const startButton = document.querySelector('.start');
-const stopButton = document.querySelector('.stop');
+const startButton = document.querySelector('#start');
+const stopButton = document.querySelector('#stop');
 
 function Stopwatch() {
     let startTime, endTime, running, duration = 0;
