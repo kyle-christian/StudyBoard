@@ -1,4 +1,5 @@
 <%- include('partials/header') -%>
+<script defer src="/js/main.js"></script>
 <div class="container">
   <div class="row mt-5">
 
@@ -18,18 +19,18 @@
         <button type="submit">create stat</button>
       </form>
 
-      <form
-      class="col-1"
-      action="/stat/updateStat?_method=PUT"
-      method="POST"
-      >
-        <button type="submit">stop</button>
-      </form>
-
       <button class="start">start</button>
       <button class="stop">stop</button>
 
-      <span><%=stat.time%></span>
+      <% if (stat?.time == 'NaN') {%>
+         <span>Hello!</span>
+      <%} else {%>
+        <span><%= Math.floor(stat?.time / 60)%> minutes studied!</span>
+        <%}%>
+
+      <span>
+        <%=stat?.time%>
+      </span>
 
     </div>
   </div>

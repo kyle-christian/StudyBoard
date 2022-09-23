@@ -6,6 +6,24 @@
         <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
     </div>
 </main>
+
+<div class="container">
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Hours</th>
+          <th>Minutes</th>
+        </tr>
+        <% for(var i=0; i<stat.length; i++) {%>
+            <tr>
+                <th><%=stat[i].userName%></th>
+                <th><%=Math.floor(stat[i].time / 3600)%></th>
+                <th><%=Math.floor(stat[i].time / 60)%></th>
+            </tr>
+        <% } %>
+      </table>
+</div>
+
     
 
 <%- include('partials/footer') -%>

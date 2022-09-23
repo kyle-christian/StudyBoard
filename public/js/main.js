@@ -43,12 +43,6 @@ startButton.addEventListener('click', () => {
     sw.start();
 })
 
-// stopButton.addEventListener('click', () => {
-//     console.log('goodbye');
-//     sw.stop();
-//     console.log(sw.duration);
-// })
-
 stopButton.addEventListener('click', stopAndUpdateDB);
 
 async function stopAndUpdateDB() {
@@ -71,3 +65,9 @@ async function stopAndUpdateDB() {
         console.log(err);
     };
 }
+
+// function testDivide (time) {
+//     if (time > 60) return time / 60;
+// }
+
+// console.log(testDivide(93))
