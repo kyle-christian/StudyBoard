@@ -43,8 +43,31 @@ startButton.addEventListener('click', () => {
     sw.start();
 })
 
-stopButton.addEventListener('click', () => {
-    console.log('goodbye');
-    sw.stop();
-    console.log(sw.duration);
-})
+// stopButton.addEventListener('click', () => {
+//     console.log('goodbye');
+//     sw.stop();
+//     console.log(sw.duration);
+// })
+
+stopButton.addEventListener('click', stopAndUpdateDB);
+
+async function stopAndUpdateDB() {
+    try{
+        console.log('goodbye');
+        sw.stop();
+        console.log(sw.duration);
+        
+        const response = await fetch('/stat/updateStat', {
+            method: 'put',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                'duration': sw.duration
+            })
+        })
+        const data = await response.json();
+        console.log(data);
+        location.reload();
+    } catch(err) {
+        console.log(err);
+    };
+}
