@@ -6,7 +6,7 @@ module.exports = {
   getProfile: async (req, res) => {
     try {
       const stat = await Stat.findOne ( {user: req.user.id} )
-      const statList = await Stat.find();
+      const statList = await Stat.find().sort({ time: "desc" }).lean();
       res.render("profile.ejs", { stat: stat, statList: statList, user: req.user });
     } catch (err) {
       console.log(err);

@@ -38,11 +38,15 @@ function Stopwatch() {
 
 const sw = new Stopwatch();
 
-startButton.addEventListener('click', () => {
+// startButton.addEventListener('click', () => {
+//     console.log('hello');
+//     sw.start();
+// })
+
+function startSw() {
     console.log('hello');
-    alert('stopwatch started')
     sw.start();
-})
+}
 
 stopButton.addEventListener('click', stopAndUpdateDB);
 
@@ -67,8 +71,14 @@ async function stopAndUpdateDB() {
     };
 }
 
-// function testDivide (time) {
-//     if (time > 60) return time / 60;
-// }
+// toast notifications
 
-// console.log(testDivide(93))
+const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
+  })
+}
