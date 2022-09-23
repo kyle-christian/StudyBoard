@@ -40,6 +40,7 @@ const sw = new Stopwatch();
 
 startButton.addEventListener('click', () => {
     console.log('hello');
+    alert('stopwatch started')
     sw.start();
 })
 
