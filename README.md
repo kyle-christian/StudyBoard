@@ -17,13 +17,39 @@ A Simple Accountability Leaderboard App for 100Devs Members built using the MVC 
 
 # How It's Made:
 
-**Tech used:** HTML5, CSS3, JavaScript, Node.js, Express.js, Mongoose, Passport, MongoDB, EJS, bcrypt
+**Tech used:** HTML5, CSS3, Bootstrap, JavaScript, Node.js, Express.js, Mongoose, Passport, MongoDB, EJS, bcrypt
+
+We envisioned an "accountability" app for users to compare their study statistics with other 100Dev peers. With the help of the MVC architecture, we were able to create an easily navigable enviroment. This led to more production and less asking of where certain code was located. Passport was used for user authentication with bcrypt as a password "salter". 
+
+When users log in and create an account, they're presented with a "create" button that sends a post request to the server, which is then routed to the DB where their "time" statistic is created. We then use these values in the leaderboard and divide the time to show hours, minutes, and seconds respectively. 
+
+The timer itself contains two different functions. One is a constructor function that records the user's time and updates MongoDB every time it is stopped. The other function is a timer function that displays the elapsed time to the user directly.
+
+We hope you enjoy our app!
 
 ---
 
-# Who is this for? 
+## Optimizations
 
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
+- Ideally we would want to expand on the stopwatch element to do pomodoro's rather than counting up. This would promote regular breaks to the user.
+
+- Furthermore we would like to combine both of the functions stated in How It's Made to reduce bloat.
+
+- We would also want to host this on a different platform as repl.it in its current state takes a bit too long to "wake up" which affects user retainment.
+
+- Users should be able to visit each other's profiles rather than being limited to their own.
+
+- The ability to upload a profile photo is in the cards as well so that user's have more personalization when it comes to their profile.
+
+---
+
+## Lessons Learned:
+
+This is the first group project that many of us took part of. It was a logistical hurdle to try and plan meetings around the different time zones but we communicated clearly which led to a painless workflow. 
+
+We learned how to assign different features/styling to different people. However, it was a bit of a struggle to agree on styling. Therefore we opted to use Bootstrap instead for painless/continuous styling.
+
+Sticking meticulously to the MVC architecture helped us navigate the codebase easier and abstracted a lot of unnecessary code from developers working on unrelated features.
 
 ---
 
