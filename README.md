@@ -67,7 +67,7 @@ Sticking meticulously to the MVC architecture helped us navigate the codebase ea
 
 ---
 
-# acknowledgements 
+# Acknowledgements 
 ## Special Thanks to the Original Contributors (in no particular order)  
   - Kyle Christian https://github.com/kyle-christian
   - Jasmine P. Vo https://github.com/jasminepvo
