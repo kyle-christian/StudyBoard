@@ -1,6 +1,13 @@
+//stopwatch controls
 const startButton = document.querySelector('#start');
-const stopButton = document.querySelector('#stop');
+// const stopButton = document.querySelector('#stop');
 
+//timer controls
+let appendSeconds = document.querySelector('.sec')
+let appendMinutes = document.querySelector('.min')
+let appendHours = document.querySelector('.hour')
+
+//stopwatch
 function Stopwatch() {
     let startTime, endTime, running, duration = 0;
 
@@ -36,31 +43,26 @@ function Stopwatch() {
     });
 };
 
-const sw = new Stopwatch();
-
-// startButton.addEventListener('click', () => {
-//     console.log('hello');
-//     sw.start();
-// })
+const swData = new Stopwatch();
 
 function startSw() {
     console.log('hello');
-    sw.start();
+    swData.start();
 }
 
-stopButton.addEventListener('click', stopAndUpdateDB);
+// stopButton.addEventListener('click', stopAndUpdateDB);
 
 async function stopAndUpdateDB() {
     try{
         console.log('goodbye');
-        sw.stop();
-        console.log(sw.duration);
+        swData.stop();
+        console.log(swData.duration);
         
         const response = await fetch('/stat/updateStat', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
-                'duration': sw.duration
+                'duration': swData.duration
             })
         })
         const data = await response.json();
@@ -70,6 +72,80 @@ async function stopAndUpdateDB() {
         console.log(err);
     };
 }
+
+//stopwatch timer
+var sw = {
+    // (A) PROPERTIES
+    etime : null, // html time display
+    // erst : null, // html reset button
+    ego : null, // html start/stop button
+    timer : null, // timer object
+    now : 0, // current elapsed time
+  
+    // (B) INITIALIZE
+    init : () => {
+      // (B1) GET HTML ELEMENTS
+      sw.etime = document.getElementById("sw-time");
+    //   sw.erst = document.getElementById("sw-rst");
+      sw.ego = document.getElementById("sw-go");
+  
+      // (B2) ENABLE BUTTON CONTROLS
+    //   sw.erst.onclick = sw.reset;
+      sw.ego.onclick = sw.start;
+    //   sw.erst.disabled = false;
+      sw.ego.disabled = false;
+    },
+  
+    // (C) START!
+    start : () => {
+      startSw();
+      sw.timer = setInterval(sw.tick, 1000);
+      sw.ego.value = "Stop";
+      sw.ego.onclick = sw.stop;
+    },
+  
+    // (D) STOP
+    stop : () => {
+      stopAndUpdateDB();
+      clearInterval(sw.timer);
+      sw.timer = null;
+      sw.ego.value = "Start";
+      sw.ego.onclick = sw.start;
+    },
+  
+    // (E) TIMER ACTION
+    tick : () => {
+      // (E1) CALCULATE HOURS, MINS, SECONDS
+      sw.now++;
+      let hours = 0, mins = 0, secs = 0,
+      remain = sw.now;
+      hours = Math.floor(remain / 3600);
+      remain -= hours * 3600;
+      mins = Math.floor(remain / 60);
+      remain -= mins * 60;
+      secs = remain;
+  
+      // (E2) UPDATE THE DISPLAY TIMER
+      if (hours<10) { hours = "0" + hours; }
+      if (mins<10) { mins = "0" + mins; }
+      if (secs<10) { secs = "0" + secs; }
+      sw.etime.innerHTML = hours + ":" + mins + ":" + secs;
+    },
+  
+    // (F) RESET
+    reset : () => {
+      if (sw.timer != null) { sw.stop(); }
+      sw.now = -1;
+      sw.tick();
+    }
+  };
+  window.addEventListener("load", sw.init);
+
+
+// startButton.addEventListener('click', () => {
+//     console.log('hello');
+//     swData.start();
+// })
 
 // toast notifications
 
@@ -82,3 +158,5 @@ if (toastTrigger) {
     toast.show()
   })
 }
+
+//Stopwatch appending to the actual page

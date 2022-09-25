@@ -18,13 +18,15 @@
               <th>Name</th>
               <th>Hour(s)</th>
               <th>Minute(s)</th>
+              <th>Second(s)</th>
             </tr>
             <% for(var i=0; i<stat.length; i++) {%>
                 <tr>
                     <th scope="row"><%=i + 1%></th>
                     <th><%=stat[i].userName%></th>
-                    <th><%=Math.floor(stat[i].time / 3600)%></th>
-                    <th><%=Math.floor(stat[i].time / 60)%></th>
+                    <th><%=Math.floor((stat[i].time / 3600) * 10) / 10%></th>
+                    <th><%=Math.floor((stat[i].time / 60) * 10) / 10%></th>
+                    <th><%=Math.floor(stat[i].time * 10) / 10%></th>
                 </tr>
             <% } %>
           </table>
