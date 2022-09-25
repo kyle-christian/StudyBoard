@@ -64,6 +64,7 @@ Sticking meticulously to the MVC architecture helped us navigate the codebase ea
 - Justin Dickson https://github.com/jay-nakagawa
 - Tim Quattrochi https://github.com/Tim-Quattrochi
 - Wonuola Adekunle https://github.com/harshleey
+- Jay Ehm https://github.com/JMarch1618
 
 ## Shout Out to the Goat
 
