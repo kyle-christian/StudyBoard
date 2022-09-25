@@ -67,3 +67,16 @@ Sticking meticulously to the MVC architecture helped us navigate the codebase ea
 
 ---
 
+# Special Thanks to the Original Contributors (in no particular order)
+  
+  - Kyle Christian https://github.com/kyle-christian
+  - Jasmine P. Vo https://github.com/jasminepvo
+  - Justin Dickson https://github.com/jay-nakagawa
+  - Tim Quattrochi https://github.com/Tim-Quattrochi
+  - Placeholder for Wonuola
+  
+  ---
+  # Shout Out to the Goat
+  
+    - Leon Noel https://github.com/leonnoel
+
