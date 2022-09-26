@@ -7,6 +7,4 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 router.post("/createStat", statsController.createStat);
 router.put("/updateStat", statsController.updateStat);
 
-// router.put("/likePost/:id", postsController.likePost);
-
 module.exports = router;

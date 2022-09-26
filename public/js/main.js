@@ -1,6 +1,6 @@
 //stopwatch controls
 const startButton = document.querySelector('#start');
-// const stopButton = document.querySelector('#stop');
+
 
 //timer controls
 let appendSeconds = document.querySelector('.sec')
@@ -50,7 +50,6 @@ function startSw() {
     swData.start();
 }
 
-// stopButton.addEventListener('click', stopAndUpdateDB);
 
 async function stopAndUpdateDB() {
     try{
@@ -86,13 +85,11 @@ var sw = {
     init : () => {
       // (B1) GET HTML ELEMENTS
       sw.etime = document.getElementById("sw-time");
-    //   sw.erst = document.getElementById("sw-rst");
       sw.ego = document.getElementById("sw-go");
   
       // (B2) ENABLE BUTTON CONTROLS
-    //   sw.erst.onclick = sw.reset;
+ 
       sw.ego.onclick = sw.start;
-    //   sw.erst.disabled = false;
       sw.ego.disabled = false;
     },
   
@@ -140,12 +137,6 @@ var sw = {
     }
   };
   window.addEventListener("load", sw.init);
-
-
-// startButton.addEventListener('click', () => {
-//     console.log('hello');
-//     swData.start();
-// })
 
 // toast notifications
 

@@ -4,13 +4,10 @@
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6 flex-fill">
-      <!-- <h2 class="text-center">placeholder: <%=Math.floor(stat?.time)%> seconds</h2> -->
-      
       <!-- CURRENT TIME -->
       <h1 class="text-center" id="sw-time">00:00:00</h1>      
       <div class="d-flex justify-content-center" id="stopwatch">
         <!-- CONTROLS -->
-        <!-- <input class="btn btn-primary btn-lg px-4 me-md-2" type="button" value="Reset" id="sw-rst"> -->
         <%if(stat?.user != user.id) {%>
           <form
           action="/stat/createStat"
@@ -27,24 +24,11 @@
       <h1 class="display-5 fw-bold lh-1 mb-3">Welcome <%=user.userName[0].toUpperCase() + user.userName.substr(1)%>! You've studied a total of <%=Math.round( (stat?.time / 60) * 10) / 10%> minute(s).</h1>
       <p class="lead">Initialize your time statistic by clicking on create. Once your stat has been created, simply use the start/stop buttons to record your study progress. Remember to take regular breaks!</p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <!-- <%if(stat?.user != user.id) {%>
-          <form
-          action="/stat/createStat"
-          method="POST"
-          >
-            <button class="btn btn-primary btn-lg px-4 me-md-2" type="submit">Create</button>
-          </form>
-        <%}%> -->
-        <!-- <button id="start" class="btn btn-primary btn-lg px-4 me-md-2">Start</button> -->
-        <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" id="liveToastBtn" onclick="swData.start()">Start</button>
-        <button id="stop" class="btn btn-outline-secondary btn-lg px-4">Stop</button> -->
-
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
           <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
               <img src="..." class="rounded me-2" alt="...">
               <strong class="me-auto text-primary">StudyBoard</strong>
-              <!-- <small>11 mins ago</small> -->
               <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
