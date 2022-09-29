@@ -100,7 +100,7 @@ Example:
  ```
  git add .
  git commit -m "Added a link to contributing section"
- git push Add a link to CONTRIBUTING.md to the  contributing section #29
+ git push origin 29-add-a-link-to-contributingmd-to-the-contributing-section
  ```
 
 6.  Go to the branch on Github and submit a PR
