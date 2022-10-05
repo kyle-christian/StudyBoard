@@ -70,22 +70,66 @@ Sticking meticulously to the MVC architecture helped us navigate the codebase ea
 
     - Leon Noel https://github.com/leonnoel
 
+
+## Additional Contributors
+
+- Zira Serrano https://github.com/ziraserrano
+
 <br>
 <br>
 
 # Want to Contribute? Fork and Clone the Repo!
 
+## READ THIS FIRST
+1. Read more on contributing guidelines here: https://github.com/MarcDiethelm/contributing/blob/master/README.md
+2. See issues for what you can work on: https://github.com/kyle-christian/StudyBoard/issues
+3. Fork this repo and clone locally
+  ```
+  git clone <insert link here>
+  ```
+
+4. Create a branch with the name of the issue and make all your changes there
+
+Example:
+```
+ git branch 29-add-a-link-to-contributingmd-to-the-contributing-section
+ git checkout 29-add-a-link-to-contributingmd-to-the-contributing-section
+ ```
+
+5. Push your changes to that branch
+ ```
+ git add .
+ git commit -m "Added a link to contributing section"
+ git push origin 29-add-a-link-to-contributingmd-to-the-contributing-section
+ ```
+
+6.  Go to the branch on Github and submit a PR
+
+
+
+Note: Please submit PR's with an attachment (photo of styling changes or code).
+
+
+<br>
+
+---
+
 ## Install all the dependencies or node packages used for development via Terminal
 
-`npm install`
+```
+npm install
+```
 
 ---
 
 ## Things to add
 
 - Create a `.env` file and add the following as `key= value`
-  - PORT= 2121 (can be any port example: 3000)
-  - DB_STRING= `your database URI`
+  ```
+  PORT= 8000
+  DB_STRING= `your database URI`
+  ```
+*message one of us for the database URI*
 
 _See npm dotenv documentation here: https://www.npmjs.com/package/dotenv_
 
@@ -93,9 +137,6 @@ _See npm dotenv documentation here: https://www.npmjs.com/package/dotenv_
 
 ## Run the server
 
-`npm start`
-
----
-
-Please submit PR's with an attachment (photo of styling changes or code).
-Read more on contributing guidelines here: https://github.com/MarcDiethelm/contributing/blob/master/README.md
+```
+npm start
+```
